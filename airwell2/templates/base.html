@@ -1,0 +1,56 @@
+
+{% load static %}<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
+  <link rel="icon" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggc3R5bGU9ImZpbGw6IzdDQzZFRTsiIGQ9Ik00MzIuNTY0LDMyNC4xNzlDNDMyLjU2NCw0MjcuNzQ2LDM1My4zNTMsNTEyLDI1Niw1MTJTNzkuNDM2LDQyNy43NDYsNzkuNDM2LDMyNC4xNzkNCgljMC00Mi40OTcsMjcuOTc4LTEwNy43MTksODMuMTQ0LTE5My44NjVDMjAyLjkwNiw2Ny4zNTMsMjQzLjgxMiwxNS40MiwyNDQuMjIyLDE0LjkxTDI1NiwwbDExLjc3OCwxNC45MQ0KCWMwLjQxLDAuNTEsNDEuMzE3LDUyLjQ0NCw4MS42NDMsMTE1LjQwNEM0MDQuNTg2LDIxNi40Niw0MzIuNTY0LDI4MS42ODIsNDMyLjU2NCwzMjQuMTc5eiIvPg0KPHBhdGggc3R5bGU9ImZpbGw6IzAwQUNFQTsiIGQ9Ik00MzIuNTY0LDMyNC4xNzlDNDMyLjU2NCw0MjcuNzQ2LDM1My4zNTMsNTEyLDI1Niw1MTJWMGwxMS43NzgsMTQuOTENCgljMC40MSwwLjUxLDQxLjMxNyw1Mi40NDQsODEuNjQzLDExNS40MDRDNDA0LjU4NiwyMTYuNDYsNDMyLjU2NCwyODEuNjgyLDQzMi41NjQsMzI0LjE3OXoiLz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K">
+  <title>{% block title %}Airwell{% endblock %}</title>
+</head>
+<body style="background-color: #d0d0d0a1;">
+<div id='nav'></div>
+
+  <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color:#1b222d">
+
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'home' %}" style="color :#f8f8ff; font-size:40px; font-family: 'Courier New', Courier, monospace;">
+        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggc3R5bGU9ImZpbGw6IzdDQzZFRTsiIGQ9Ik00MzIuNTY0LDMyNC4xNzlDNDMyLjU2NCw0MjcuNzQ2LDM1My4zNTMsNTEyLDI1Niw1MTJTNzkuNDM2LDQyNy43NDYsNzkuNDM2LDMyNC4xNzkNCgljMC00Mi40OTcsMjcuOTc4LTEwNy43MTksODMuMTQ0LTE5My44NjVDMjAyLjkwNiw2Ny4zNTMsMjQzLjgxMiwxNS40MiwyNDQuMjIyLDE0LjkxTDI1NiwwbDExLjc3OCwxNC45MQ0KCWMwLjQxLDAuNTEsNDEuMzE3LDUyLjQ0NCw4MS42NDMsMTE1LjQwNEM0MDQuNTg2LDIxNi40Niw0MzIuNTY0LDI4MS42ODIsNDMyLjU2NCwzMjQuMTc5eiIvPg0KPHBhdGggc3R5bGU9ImZpbGw6IzAwQUNFQTsiIGQ9Ik00MzIuNTY0LDMyNC4xNzlDNDMyLjU2NCw0MjcuNzQ2LDM1My4zNTMsNTEyLDI1Niw1MTJWMGwxMS43NzgsMTQuOTENCgljMC40MSwwLjUxLDQxLjMxNyw1Mi40NDQsODEuNjQzLDExNS40MDRDNDA0LjU4NiwyMTYuNDYsNDMyLjU2NCwyODEuNjgyLDQzMi41NjQsMzI0LjE3OXoiLz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K" width="50px" height="50px"/></img>
+        Airwell
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="{% url 'upload_yaml' %}" style="color :#f8f8ff; font-size:27px;">Upload Config</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="{% url 'extra_uploads' %}" style="color :#f8f8ff; font-size:27px;">Upload Extras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="{% url 'result_file' %}" style="color :#f8f8ff; font-size:27px;">Output</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-md-12">
+        <div class="card mb-4">
+          <div class="card-body">
+            {% block content %}
+            {% endblock %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

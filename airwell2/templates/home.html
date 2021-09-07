@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+<body>
+{% block content %}
+  {% if msg %} {% autoescape off %} {{ msg }} {% endautoescape %} {% endif %}
+    <h3 class="card-title"> Welcome to Airwell!</h3>
+    <p class="card-text">This is a first pass at an interactive dag generator to hopefully make your life a bit easier :)</p>
+    <h6 class="card-text">Project Documentation</h6>
+    <a href="https://github.com/MPKeet/Airwell/blob/main/README.md">Source Code</a>
+{% endblock %}
+</body>

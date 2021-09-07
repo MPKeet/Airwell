@@ -1,0 +1,8 @@
+    
+{{ task_id|safe }} = PythonVirtualenvOperator(
+    task_id = "{{ task_id|safe}}",
+    python_callable={{ callable|safe}},
+    requirements = {{ requirements|safe}},
+    system_site_packages=True,
+    dag=dag
+)

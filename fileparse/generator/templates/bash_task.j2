@@ -1,0 +1,5 @@
+{{ task_id|safe }} = BashOperator(
+    task_id="{{ task_id|safe }}",
+    bash_command="{{ command }}",
+    dag=dag
+)

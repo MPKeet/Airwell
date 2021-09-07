@@ -1,0 +1,24 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+<main class="container">
+<div class="TextBox">
+    <div style="width: fit-content;">
+        {% block content %}
+        
+
+        <h3> Generated DAG: </h3>
+        <button name="button" type="submit" onclick=location.href="{% url 'result_file/actionUrl' %}" class="btn btn-primary"> Dag Download</button>
+
+        <pre>
+            <code>
+            <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}" style="color :#f8f8ff;"/>
+            
+                <p> {{ dag }}</p> 
+            </code>
+        </pre>
+        {% endblock %}
+    </div>
+</div>
+</main>

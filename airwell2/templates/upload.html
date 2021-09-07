@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <h4> YAML Config File </h4>
+  {% if msg %} {% autoescape off %} {{ msg }} {% endautoescape %} {% endif %}
+  <form method="post" enctype="multipart/form-data" >
+    {% csrf_token %}
+    <input type="file" name="configs">
+    <button type="submit" class="btn btn-primary">Upload File</button>
+  </form>
+  {% if url %}
+    <p>Uploaded file: <a href="{{ url }}">{{ url }}</a></p>
+  {% endif %}
+{% endblock %}

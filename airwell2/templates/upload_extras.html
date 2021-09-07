@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Upload Extra Files</h2>
+  {% if msg %} {% autoescape off %} {{ msg }} {% endautoescape %} {% endif %}
+  <form method="post" enctype="multipart/form-data" >
+    {% csrf_token %}
+    <dl>
+        <p>
+            <label>Browse and select one or more files</label>&nbsp;&nbsp;
+            <input type="file" name="files" autocomplete="off" required multiple>
+        </p>
+    </dl>
+    <p>
+        <input type="submit" value="Upload" class="btn btn-primary">
+    </p>
+    </form>
+  {% if url %}
+    <p>Uploaded file: <a href="{{ url }}">{{ url }}</a></p>
+  {% endif %}
+{% endblock %}
+

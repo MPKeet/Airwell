@@ -1,0 +1,7 @@
+{{ task_id }} = SnowflakeOperator(
+    task_id="{{ task_id }}",
+    snowflake_conn_id="{{ connection }}",
+    sql="{{ sql }}",
+    parameters="{{ parameters }}",
+    dag=dag
+)
